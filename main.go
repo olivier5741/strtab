@@ -203,7 +203,6 @@ func (t T) GetContentWithHeaders(ok bool) [][]string {
 		colHead = append(colHead, "")
 	}
 	colHead = append(colHead, t.colHeader...)
-	// should put a 'if'
 	if len(t.content) > 0 {
 		out = append(out, colHead[:len(t.content[0])+1])
 	}
