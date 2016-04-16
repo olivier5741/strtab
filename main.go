@@ -99,6 +99,7 @@ func (t *T) SetHeader(c []string) error {
 // NewTfromMap creates table from multi map
 // and set headers according to map keys
 func NewTfromMap(vs map[string]map[string]string) *T {
+	fmt.Println(vs)
 	h := make(map[string]int, 0)
 	var c [][]string
 	n := 0
@@ -124,6 +125,7 @@ func NewTfromMap(vs map[string]map[string]string) *T {
 	for k, v := range h {
 		hSlice[v] = k
 	}
+	fmt.Println(hSlice)
 	t := NewT(hSlice, c...)
 	return t
 }

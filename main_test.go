@@ -16,7 +16,7 @@ func Test(t *testing.T) {
 	t.Log(tab.GetContentWithColHeader())
 	t.Log(tab.GetContentWithHeaders(true))
 
-	tab.Transpose()
+	tab.Sort().Transpose().Sort()
 	t.Log(tab.GetContentWithRowHeader())
 	t.Log(tab.GetContentWithColHeader())
 	t.Log(tab.GetContentWithHeaders(true))
